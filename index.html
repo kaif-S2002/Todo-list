@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="/Todo-list/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="heading">
+          <h2>To-Do List</h2>
+          <span
+            ><img
+              src="https://pic.onlinewebfonts.com/thumbnails/icons_491208.svg"
+              alt="todo-image"
+          /></span>
+        </div>
+        <div class="input-area">
+          <input id="input-text" type="text" placeholder="Enter text here" />
+          <button id="btn" type="submit" onclick="handleClick()">Create</button>
+        </div>
+        <div class="list-container">
+          <ul id="list">
+            <!-- <li class="checked" id="listElemments"></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
