@@ -1,6 +1,6 @@
 const inputText = document.getElementById("input-text");
 const list = document.getElementById("list");
-// const data = document.querySelector(".list-container");
+const listPlaceholder = document.querySelector(".list-placeholder");
 
 function handleClick() {
   if (!inputText.value) {
@@ -14,7 +14,9 @@ function handleClick() {
     li.appendChild(span);
     inputText.value = "";
     saveData();
+    showPlaceholder();
   }
+  return false;
 }
 
 list.addEventListener(
@@ -23,9 +25,11 @@ list.addEventListener(
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
       saveData();
+      showPlaceholder();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
       saveData();
+      showPlaceholder();
     }
   },
   false
@@ -39,3 +43,16 @@ function showData() {
   list.innerHTML = localStorage.getItem("data");
 }
 showData();
+
+document.addEventListener("keypress", (KeyboardEvent) => {
+  if (KeyboardEvent.keyCode == 13) {
+    handleClick();
+  }
+});
+
+function showPlaceholder() {
+  return list.childElementCount === 0
+    ? (listPlaceholder.style.display = "flex")
+    : (listPlaceholder.style.display = "none");
+}
+showPlaceholder();
