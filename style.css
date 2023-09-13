@@ -91,9 +91,12 @@
   width: 100%;
 }
 .list-container ul li {
-  font-size: 24px;
-  padding-bottom: 15px;
-  color: rgb(63, 63, 63);
+  font-size: 21px;
+  padding: 16px 20px 20px 20px;
+  margin: 0px 5px 10px 0px;
+  color: rgb(71, 71, 71);
+  background: rgb(222, 222, 222);
+  border-radius: 20px;
   list-style: none;
   user-select: none;
   max-width: 100%;
@@ -102,32 +105,43 @@
 }
 .list-container ul li::before {
   content: "\2731";
-  color: rgba(255, 129, 44, 0.884);
+  color: rgba(255, 142, 67, 0.918);
   font-size: 24px;
   padding-right: 8px;
 }
 ul li.checked {
-  color: rgb(219, 219, 219);
+  color: rgb(173, 173, 173);
 }
 ul li.checked::before {
   content: "\2714";
-  color: rgb(9, 255, 0);
+  color: rgb(19, 212, 12);
   font-size: 24px;
   padding-right: 10px;
 }
 ul li span {
   position: absolute;
-  right: 0.6em;
-  top: 7px;
-  font-size: 19px;
-  background: rgb(243, 243, 243);
-  color: rgb(83, 83, 83);
-  padding: 0px 6px;
+  right: 0.5em;
+  top: 1.35em;
+  font-size: 18px;
+  background: rgb(197, 197, 197);
+  color: rgb(82, 82, 82);
+  padding: 0px 5.5px;
   border-radius: 50%;
   transition: ease 0.2s;
 }
 ul li span:hover {
-  background: rgb(218, 218, 218);
+  background: rgb(180, 180, 180);
+}
+.list-placeholder {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  letter-spacing: 1px;
+  color: rgb(211, 210, 210);
+  width: 100%;
+  height: 100%;
 }
 .list-container::-webkit-scrollbar {
   width: 4px;
