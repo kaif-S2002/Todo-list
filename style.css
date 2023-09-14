@@ -74,6 +74,7 @@
   background: rgb(255, 102, 0);
   color: white;
   cursor: pointer;
+  user-select: none;
   transform: translateX(8.6cm);
 }
 .box .input-area button:active {
@@ -99,6 +100,7 @@
   border-radius: 20px;
   list-style: none;
   user-select: none;
+  cursor: pointer;
   max-width: 100%;
   padding-right: 45px;
   position: relative;
@@ -139,6 +141,7 @@ ul li span:hover {
   align-items: center;
   padding-bottom: 50px;
   letter-spacing: 1px;
+  user-select: none;
   color: rgb(211, 210, 210);
   width: 100%;
   height: 100%;
