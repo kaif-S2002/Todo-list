@@ -76,7 +76,6 @@
   cursor: pointer;
   user-select: none;
   right: 0;
-  /* transform: translateX(8.6cm); */
 }
 .box .input-area button:active {
   background: rgb(241, 97, 0);
